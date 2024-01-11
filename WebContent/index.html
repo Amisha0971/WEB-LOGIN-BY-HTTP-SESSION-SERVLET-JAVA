@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Form</title>
+<style>
+    body {
+        background-color:silver;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .container {
+        width: 400px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+        text-align: center;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%; /* Make the text fields take the full width */
+        padding: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    }
+
+    input[type="submit"] {
+        width: 100%; /* Make the login button take the full width */
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <form action="LoginServlet">
+        <label for="name"><b>Name</b></label>
+        <input type="text" name="name" placeholder="Enter Name Here..." required><br>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" name="password" placeholder="Enter Password Here..." required><br>
+
+        <input type="submit" value="Login">
+    </form>
+</div>
+
+</body>
+</html>
